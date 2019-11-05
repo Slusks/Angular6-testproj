@@ -1,0 +1,13 @@
+<div *ngIf="cat">
+
+  <h2>{{cat.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{cat.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="cat.name" placeholder="name"/>
+      <img src ={{cat.pic}} style = "transform:rotate(90deg)" width="300" height="220">
+    </label>
+  </div>
+    
+
+</div>

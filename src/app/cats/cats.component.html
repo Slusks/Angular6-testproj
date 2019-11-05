@@ -1,0 +1,12 @@
+<h2>My Cats</h2>
+
+<ul class="cats">
+  <li *ngFor="let cat of cats"
+    [class.selected]="cat === selectedcat"
+    (click)="onSelect(cat)"> <!-- this is where the click binding is, it's still inside the li element -->
+    <span class="badge">{{cat.id}}</span> {{cat.name}}
+
+  </li>
+</ul>
+
+<app-cat-detail [cat]="selectedcat"></app-cat-detail> <!-- example of property binding -->
